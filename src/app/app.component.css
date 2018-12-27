@@ -21,24 +21,34 @@
     border-radius: 0px;
     background: #F3F3F3;
     border: none;
+    /* text-align: center; */
 }
 
 .navbar-header {
     margin-top: 40px;
     margin-bottom: 30px;
+    text-align: center;
 }
 
+.navbar-name {
+    font-size: 15px;
+    position: -ms-page;
+}
 .navbar-brand {
     height: 100%;
     font-size: 32px;
     letter-spacing: 0.28px;
     padding: 0px;
     margin-left: 0px !important;
+    width: 50%;
+    text-align: justify;
+    /* position: absolute; */
     color: #000;
 }
 
 .navbar-brand:hover {
     color: #000;
+    position: absolute;
 }
 
 .network-name {

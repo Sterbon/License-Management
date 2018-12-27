@@ -31,6 +31,7 @@ import { businessClaimComponent } from './businessClaim/businessClaim.component'
 import { businessReleaseComponent } from './businessRelease/businessRelease.component';
 import { employeeClaimComponent } from './employeeClaim/employeeClaim.component';
 import { employeeReleaseComponent } from './employeeRelease/employeeRelease.component';
+import { MyClaimComponent } from './my-claim/my-claim.component';
 
   @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { employeeReleaseComponent } from './employeeRelease/employeeRelease.comp
     businessClaimComponent,
     businessReleaseComponent,
     employeeClaimComponent,
-    employeeReleaseComponent
+    employeeReleaseComponent,
+    MyClaimComponent
   ],
   imports: [
     BrowserModule,

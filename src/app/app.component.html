@@ -14,9 +14,12 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <p class="network-name">license-management-network@0.0.2-deploy.38.bna</p>
-        <p class="navbar-brand">angular-app</p>
+            <p class="navbar-brand">LICENSE MANAGEMENT</p> 
+            <p class="navbar-name">Name:</p>
       </div>
+      <!-- <div class="navbar-header">
+        <p class="navbar-name">Name:</p>
+      </div> -->
       <ul class="nav navbar-nav">
         <li class="dropdown active">
             <a class="dropdown-toggle" data-toggle="dropdown">Assets</a>
@@ -30,11 +33,11 @@
           <a class="dropdown-toggle" data-toggle="dropdown">Participants</a>
           <ul class="dropdown-menu scrollable-menu">
             
-            <li><a [routerLink]="['/BusinessEntity']">BusinessEntity</a></li>
+            <li><a [routerLink]="['/BusinessEntity']">Business Entity</a></li>
             
-            <li><a [routerLink]="['/EmployeeEntity']">EmployeeEntity</a></li>
+            <li><a [routerLink]="['/EmployeeEntity']">Employee Entity</a></li>
             
-            <li><a [routerLink]="['/softwareRequest']">softwareRequest</a></li>
+            <li><a [routerLink]="['/softwareRequest']">Software Request</a></li>
             
           </ul>
       </li>
@@ -42,15 +45,21 @@
         <a class="dropdown-toggle" data-toggle="dropdown">Transactions</a>
         <ul class="dropdown-menu scrollable-menu">
           
-          <li><a [routerLink]="['/businessClaim']">businessClaim</a></li>
+          <li><a [routerLink]="['/businessClaim']">Business Claim</a></li>
           
-          <li><a [routerLink]="['/businessRelease']">businessRelease</a></li>
+          <li><a [routerLink]="['/businessRelease']">Business Release</a></li>
           
-          <li><a [routerLink]="['/employeeClaim']">employeeClaim</a></li>
+          <li><a [routerLink]="['/employeeClaim']">Employee Claim</a></li>
           
-          <li><a [routerLink]="['/employeeRelease']">employeeRelease</a></li>
+          <li><a [routerLink]="['/employeeRelease']">Employee Release</a></li>
           
         </ul>
+    </li>
+    <li class="dropdown active">
+      <a class="dropdown-toggle" data-toggle="dropdown">Employee Profile</a> 
+      <ul class="dropdown-menu scrollable-menu">
+      <li><a [routerLink]="['/my-claim']">My Claim</a></li>
+    </ul> 
     </li>
       </ul>
     </div>
