@@ -205,6 +205,29 @@
 
 
 
+<div class="modal fade" id="confirmClaimModal" tabindex="-1" role="dialog" aria-labelledby="confirmClaimModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="confirmClaimModalLabel">Confirm Claim</h4>
+      </div>
+      <form [formGroup]="myForm">
+        <div class="modal-body">
+          Are you sure you want to cliam this Software?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+          <button type="submit" class="btn btn-danger" data-dismiss="modal">Yes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
 
 
 
@@ -249,8 +272,10 @@
                 <th class="info">Available Quantity</th>
             
                 <th class="info">Owner</th>
-            
-              <th class="info-actions">Actions</th>
+
+                <th class="info-actions">Claim</th>
+
+                <th class="info-actions">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -268,6 +293,16 @@
                 <td class="asset-properties">{{asset.availableQuantity}}</td>
             
                 <td class="asset-properties">{{asset.owner}}</td>
+                
+
+
+            <td>
+              <button (click)=getForm(asset.softwareID) type="button" class="btn-success" data-toggle="modal" data-target="#confirmClaimModal">
+                CLAIM
+              </button>
+            </td>   
+            
+            
             
             <td>
               <button (click)="getForm(asset.softwareID);" type="button" class="btn btn-update" data-toggle="modal" data-target="#updateAssetModal">

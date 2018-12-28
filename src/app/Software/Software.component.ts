@@ -47,6 +47,7 @@ export class SoftwareComponent implements OnInit {
       totalQuantity: this.totalQuantity,
       availableQuantity: this.availableQuantity,
       owner: this.owner
+            
     });
   };
 
