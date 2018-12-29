@@ -14,14 +14,11 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-            <p class="navbar-brand">LICENSE MANAGEMENT</p> 
-            <p class="navbar-name">Name:</p>
+            <ul class="navbar-brand">LICENSE MANAGEMENT</ul>
+            <label col-xs-6 class="navbar-name">Name:</label>
       </div>
-      <!-- <div class="navbar-header">
-        <p class="navbar-name">Name:</p>
-      </div> -->
       <ul class="nav navbar-nav">
-        <li class="dropdown active">
+        <li col-sm-6 class="dropdown active">
             <a class="dropdown-toggle" data-toggle="dropdown">Assets</a>
             <ul class="dropdown-menu scrollable-menu">
               
@@ -47,21 +44,20 @@
           
           <li><a [routerLink]="['/businessClaim']">Business Claim</a></li>
           
-          <li><a [routerLink]="['/businessRelease']">Business Release</a></li>
-          
-          <li><a [routerLink]="['/employeeClaim']">Employee Claim</a></li>
-          
-          <li><a [routerLink]="['/employeeRelease']">Employee Release</a></li>
-          
+          <li><a [routerLink]="['/businessRelease']">Business Release</a></li>        
         </ul>
     </li>
     <li class="dropdown active">
-      <a class="dropdown-toggle" data-toggle="dropdown">Employee Profile</a> 
+      <a class="dropdown-toggle" data-toggle="dropdown">EmployeeProfile</a> 
       <ul class="dropdown-menu scrollable-menu">
-      <li><a [routerLink]="['/my-claim']">My Claim</a></li>
-    </ul> 
+         
+          <li><a [routerLink]="['/employeeClaim']">Employee Claim</a></li>
+          
+          <li><a [routerLink]="['/employeeRelease']">Employee Release</a></li>
+ 
+      </ul> 
     </li>
-      </ul>
+    </ul>
     </div>
   </nav>
   

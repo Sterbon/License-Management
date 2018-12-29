@@ -18,7 +18,7 @@
 }
 
 .btn-primary {
-    background: #844AE4;
+    background: #0066b3;
     border-radius: 4px;
     border: 0px;
     font-size: 14px;
@@ -88,41 +88,41 @@ label {
 
 }
 .btn-default {
-    color: #844EF4;
+    color: #0066b3;
     background-color: #ffffff;
-    border-color: #844EF4;
+    border-color: #0066b3;
     border-radius: 4px;
     width: 76px;
     height: 40px;
 }
 .btn-danger{
     color: #ffffff;
-    background-color: #844AE4;
-    border-color: #844AE4;
+    background-color: #0066b3;
+    border-color: #0066b3;
     border-radius: 4px;
     width: 76px;
     height: 40px;
 }
 .btn-danger:focus{
-    background-color: #4D21A8;
-    border-color: #4D21A8;
+    background-color: #0066b3;
+    border-color: #0066b3;
 }
 .btn-success {
     color: #ffffff;
-    background-color: #844AE4;
-    border-color: #844AE4;
+    background-color: #0066b3;
+    border-color: #0066b3;
     border-radius: 4px;
     width: 76px;
     height: 40px;
 }
 .btn-success:focus{
-    background-color: #4D21A8;
-    border-color: #4D21A8;
+    background-color: #0066b3;
+    border-color: #0066b3;
 }
 .btn-default:focus{
     background-color: #fff;
-    border-color: #4d21a8;  
-    color: #4d21a8;      
+    border-color: #0066b3;  
+    color: #0066b3;      
 }
 .participant-title{
     font-family: inherit;

@@ -2,6 +2,7 @@ import {Asset} from './org.hyperledger.composer.system';
 import {Participant} from './org.hyperledger.composer.system';
 import {Transaction} from './org.hyperledger.composer.system';
 import {Event} from './org.hyperledger.composer.system';
+//import { Profile } from 'selenium-webdriver/firefox';
 // export namespace org.hcl.licensenetwork{
    export enum BusinessEntities {
       SOFTWARE_SELLER,
@@ -64,4 +65,6 @@ import {Event} from './org.hyperledger.composer.system';
       owner: BusinessEntity;
       newOwner: BusinessEntity;
    }
+
+   
 // }
