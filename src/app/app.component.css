@@ -11,6 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+ 
 .container-fluid {
     display: grid;
     margin-left: 72px;
@@ -28,23 +29,29 @@
 .navbar-header {
     margin-top: 40px;
     margin-bottom: 30px;
-    /* border: #000; */
+      /* border: #000; */
 }
 
 .navbar-name {
-    font-size: 15px;
-    position: relative;
+    /* font-size: 15px; */
+    position: initial;
+    font-family: 'Iceberg', cursive;
+    padding: 20px;
+    text-align: justify;
+    text-emphasis-color: white;
+    width: 70%;
     color: #080808;
-    margin-right: 0px !important;
 }
 .navbar-brand {
     height: 100%;
-    font-size: 32px;
-    letter-spacing: 0.28px;
+    /* font-size: 32px; */
+    font-family: 'Iceberg', cursive;
+    letter-spacing: 0.2px;
     padding: 0px;
-    margin-left: 0px !important;
+    margin-left: 20px !important;
     width: 50%;
     text-align: justify;
+    text-emphasis-color: white;
     /* position: absolute; */
     color: rgb(10, 9, 9);
 }
