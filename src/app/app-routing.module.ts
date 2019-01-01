@@ -1,4 +1,3 @@
-//import { EmployeeComponent } from './employee/employee.component';
 /*
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,19 +21,18 @@ import { SoftwareComponent } from './Software/Software.component';
 
 import { BusinessEntityComponent } from './BusinessEntity/BusinessEntity.component';
 import { EmployeeEntityComponent } from './EmployeeEntity/EmployeeEntity.component';
-import { softwareRequestComponent } from './softwareRequest/softwareRequest.component';
 
 import { businessClaimComponent } from './businessClaim/businessClaim.component';
 import { businessReleaseComponent } from './businessRelease/businessRelease.component';
 import { employeeClaimComponent } from './employeeClaim/employeeClaim.component';
 import { employeeReleaseComponent } from './employeeRelease/employeeRelease.component';
+import { from } from 'rxjs/observable/from';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'Software', component: SoftwareComponent },
   { path: 'BusinessEntity', component: BusinessEntityComponent },
   { path: 'EmployeeEntity', component: EmployeeEntityComponent },
-  { path: 'softwareRequest', component: softwareRequestComponent },
   { path: 'businessClaim', component: businessClaimComponent },
   { path: 'businessRelease', component: businessReleaseComponent },
   { path: 'employeeClaim', component: employeeClaimComponent },

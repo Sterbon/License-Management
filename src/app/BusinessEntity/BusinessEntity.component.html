@@ -49,7 +49,7 @@
                         type="radio"
                         
                       />
-                      SOFTWARE_SELLER
+                      SOFTWARE SELLER
                     </label>
                   
                     <label>
@@ -75,7 +75,7 @@
                         type="radio"
                         
                       />
-                      CORPORATE_SUBSIDARY
+                      CORPORATE SUBSIDARY
                     </label>
                   
                     <label>
@@ -88,7 +88,7 @@
                         type="radio"
                         
                       />
-                      CORPORATE_PARTNER
+                      CORPORATE PARTNER
                     </label>
                   
                     <label>
@@ -101,7 +101,7 @@
                         type="radio"
                         
                       />
-                      CORPORATE_CLIENT
+                      CORPORATE CLIENT
                     </label>
                   
                     <label>
@@ -114,7 +114,7 @@
                         type="radio"
                         
                       />
-                      CORPORATE_JOINT_VENTURE
+                      CORPORATE JOINT VENTURE
                     </label>
                   
                 </div>
@@ -123,9 +123,39 @@
   
               
                 <div class="form-group text-left">
-                  <label for="name">Name</label>
+                  <label for="bName">Name</label>
                   
-                    <input formControlName="name" type="text" class="form-control">
+                    <input formControlName="bName" type="text" class="form-control">
+                  
+                </div>
+              
+            
+  
+              
+                <div class="form-group text-left">
+                  <label for="software">Software</label>
+                  
+                      <textarea formControlName="software" class="form-control" rows="3"></textarea>
+                  
+                </div>
+              
+            
+  
+              
+                <div class="form-group text-left">
+                  <label for="availableQuantity">Available Quantity</label>
+                  
+                    <input formControlName="availableQuantity" type="number" class="form-control">
+                  
+                </div>
+              
+            
+  
+              
+                <div class="form-group text-left">
+                  <label for="totalQuantity">Total Quantity</label>
+                  
+                    <input formControlName="totalQuantity" type="number" class="form-control">
                   
                 </div>
               
@@ -185,7 +215,7 @@
                             type="radio"
                             
                           />
-                          SOFTWARE_SELLER
+                          SOFTWARE SELLER
                         </label>
                       
                         <label>
@@ -213,7 +243,7 @@
                             type="radio"
                             
                           />
-                          CORPORATE_SUBSIDARY
+                          CORPORATE SUBSIDARY
                         </label>
                       
                         <label>
@@ -227,7 +257,7 @@
                             type="radio"
                             
                           />
-                          CORPORATE_PARTNER
+                          CORPORATE PARTNER
                         </label>
                       
                         <label>
@@ -241,7 +271,7 @@
                             type="radio"
                             
                           />
-                          CORPORATE_CLIENT
+                          CORPORATE CLIENT
                         </label>
                       
                         <label>
@@ -255,7 +285,7 @@
                             type="radio"
                             
                           />
-                          CORPORATE_JOINT_VENTURE
+                          CORPORATE JOINT VENTURE
                         </label>
                       
                       </div>
@@ -266,10 +296,39 @@
               </div>
             
               <div class="form-group text-left">
-                <label for="name">Name</label>
+                <label for="bName">Name</label>
   
                 
-                  <input [ngModel]="name"formControlName="name" type="text" class="form-control">
+                  <input [ngModel]="bName"formControlName="bName" type="text" class="form-control">
+                
+  
+              </div>
+            
+              <div class="form-group text-left">
+                <label for="software">Software</label>
+  
+                
+                  
+                    <textarea [ngModel]="software" formControlName="software" class="form-control" rows="3"></textarea>
+                  
+                
+  
+              </div>
+            
+              <div class="form-group text-left">
+                <label for="availableQuantity">Available Quantity</label>
+  
+                
+                  <input [ngModel]="availableQuantity" formControlName="availableQuantity" type="number" class="form-control">
+                
+  
+              </div>
+            
+              <div class="form-group text-left">
+                <label for="totalQuantity">Total Quantity</label>
+  
+                
+                  <input [ngModel]="totalQuantity" formControlName="totalQuantity" type="number" class="form-control">
                 
   
               </div>
@@ -310,14 +369,6 @@
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
   <div class="container">
       <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
           <strong>Error:</strong> {{errorMessage}}
@@ -325,7 +376,7 @@
     
     <div class="row">
       <div class="col-md-9">
-          <h1 class="participant-title" id='participantName'>Business Entity</h1>
+          <h1 class="modal-title" id='assetName'>Business Entity</h1>
       </div>
       <div class="col-md-3">
         <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addParticipantModal">
@@ -351,6 +402,12 @@
               
                   <th class="info">Name</th>
               
+                  <th class="info">Software</th>
+              
+                  <th class="info">Available Quantity</th>
+              
+                  <th class="info">Total Quantity</th>
+              
                 <th class="info-actions">Actions</th>
             </tr>
           </thead>
@@ -362,7 +419,13 @@
               
                   <td class="participant-properties">{{participant.businessEntity}}</td>
               
-                  <td class="participant-properties">{{participant.name}}</td>
+                  <td class="participant-properties">{{participant.bName}}</td>
+              
+                  <td class="participant-properties">{{participant.software}}</td>
+              
+                  <td class="participant-properties">{{participant.availableQuantity}}</td>
+              
+                  <td class="participant-properties">{{participant.totalQuantity}}</td>
               
               <td>
                 <button (click)="getForm(participant.businessEntityID);" type="button" class="btn btn-update" data-toggle="modal" data-target="#updateParticipantModal">

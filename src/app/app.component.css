@@ -11,62 +11,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
 .container-fluid {
     display: grid;
     margin-left: 72px;
     padding-left: 0px;
-    /* border-color: rgb(187, 23, 23); */
 }
 
 .navbar {
     border-radius: 0px;
-    background: #b8daf3;
+    background: #F3F3F3;
     border: none;
-    text-align: center; 
 }
 
 .navbar-header {
     margin-top: 40px;
     margin-bottom: 30px;
-      /* border: #000; */
 }
 
-.navbar-name {
-    /* font-size: 15px; */
-    position: initial;
-    font-family: 'Iceberg', cursive;
-    padding: 20px;
-    text-align: justify;
-    text-emphasis-color: white;
-    width: 70%;
-    color: #080808;
-}
-
-.navbar-loginb {
-    font-weight:bold;
-    color:black;
-    }
-.navbar-logoutb {
-    color:black;
-}
 .navbar-brand {
     height: 100%;
-    /* font-size: 32px; */
-    font-family: 'Iceberg', cursive;
-    letter-spacing: 0.2px;
+    font-size: 32px;
+    letter-spacing: 0.28px;
     padding: 0px;
-    margin-left: 20px !important;
-    width: 50%;
-    text-align: justify;
-    text-emphasis-color: white;
-    /* position: absolute; */
-    color: rgb(10, 9, 9);
+    margin-left: 0px !important;
+    color: #000;
 }
 
 .navbar-brand:hover {
-    color: rgb(10, 9, 9);
-    position: absolute;
+    color: #000;
 }
 
 .network-name {
@@ -82,7 +54,7 @@
 
 .navbar-nav > a {
     font-size: 14px;
-    color: #b8daf3;
+    color: #343C41;
     letter-spacing: 0.2px;
 }
 
@@ -92,13 +64,15 @@
 }
 
 .navbar-nav > li > a {
-    color: #e2e7eb;
+    color: rgb(255, 255, 255);    
+    /* background-color: #fff; */
+
     padding: 10px;
     font-weight: bold;
 }
 
 .navbar-nav > li > .active:hover > a {
-    color: #b8daf3 !important;
+    color: #6C4CC4 !important;
 }
 
 .navbar-nav > li:hover > a {
@@ -107,12 +81,13 @@
 
 .navbar-nav .active > a {
     background-color: #fff;
-    color: #0b0c0c !important;
+    color: #6C4CC4 !important;
+    border-left: #000;
 }
 
 .dropdown-menu {
     border-radius: 0px;
-    border:none; 
+    border: none;
     padding: 0px;
     box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.10);
     max-height: 0;
@@ -134,7 +109,7 @@
 .dropdown-menu > li > a {
     padding: 6px 12px;
     font-size: 14px;
-    color: #0066b3;
+    color: #343C41;
     letter-spacing: 0.2px;
     line-height: 30px;
 }

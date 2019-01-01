@@ -33,17 +33,21 @@ export class EmployeeEntityComponent implements OnInit {
   private errorMessage;
 
   employeeEntityID = new FormControl('', Validators.required);
+  businessEnties = new FormControl('', Validators.required);
+  eName = new FormControl('', Validators.required);
+  claimed = new FormControl('', Validators.required);
   businessEntity = new FormControl('', Validators.required);
-  employeeType = new FormControl('', Validators.required);
-  name = new FormControl('', Validators.required);
+  software = new FormControl('', Validators.required);
 
 
   constructor(public serviceEmployeeEntity: EmployeeEntityService, fb: FormBuilder) {
     this.myForm = fb.group({
       employeeEntityID: this.employeeEntityID,
+      businessEnties: this.businessEnties,
+      eName: this.eName,
+      claimed: this.claimed,
       businessEntity: this.businessEntity,
-      employeeType: this.employeeType,
-      name: this.name
+      software: this.software
     });
   };
 
@@ -101,16 +105,20 @@ export class EmployeeEntityComponent implements OnInit {
     this.participant = {
       $class: 'org.hcl.licensenetwork.EmployeeEntity',
       'employeeEntityID': this.employeeEntityID.value,
+      'businessEnties': this.businessEnties.value,
+      'eName': this.eName.value,
+      'claimed': this.claimed.value,
       'businessEntity': this.businessEntity.value,
-      'employeeType': this.employeeType.value,
-      'name': this.name.value
+      'software': this.software.value
     };
 
     this.myForm.setValue({
       'employeeEntityID': null,
+      'businessEnties': null,
+      'eName': null,
+      'claimed': null,
       'businessEntity': null,
-      'employeeType': null,
-      'name': null
+      'software': null
     });
 
     return this.serviceEmployeeEntity.addParticipant(this.participant)
@@ -119,9 +127,11 @@ export class EmployeeEntityComponent implements OnInit {
       this.errorMessage = null;
       this.myForm.setValue({
         'employeeEntityID': null,
+        'businessEnties': null,
+        'eName': null,
+        'claimed': null,
         'businessEntity': null,
-        'employeeType': null,
-        'name': null
+        'software': null
       });
       this.loadAll(); 
     })
@@ -138,9 +148,11 @@ export class EmployeeEntityComponent implements OnInit {
    updateParticipant(form: any): Promise<any> {
     this.participant = {
       $class: 'org.hcl.licensenetwork.EmployeeEntity',
+      'businessEnties': this.businessEnties.value,
+      'eName': this.eName.value,
+      'claimed': this.claimed.value,
       'businessEntity': this.businessEntity.value,
-      'employeeType': this.employeeType.value,
-      'name': this.name.value
+      'software': this.software.value
     };
 
     return this.serviceEmployeeEntity.updateParticipant(form.get('employeeEntityID').value, this.participant)
@@ -192,9 +204,11 @@ export class EmployeeEntityComponent implements OnInit {
       this.errorMessage = null;
       const formObject = {
         'employeeEntityID': null,
+        'businessEnties': null,
+        'eName': null,
+        'claimed': null,
         'businessEntity': null,
-        'employeeType': null,
-        'name': null
+        'software': null
       };
 
       if (result.employeeEntityID) {
@@ -203,22 +217,34 @@ export class EmployeeEntityComponent implements OnInit {
         formObject.employeeEntityID = null;
       }
 
+      if (result.businessEnties) {
+        formObject.businessEnties = result.businessEnties;
+      } else {
+        formObject.businessEnties = null;
+      }
+
+      if (result.eName) {
+        formObject.eName = result.eName;
+      } else {
+        formObject.eName = null;
+      }
+
+      if (result.claimed) {
+        formObject.claimed = result.claimed;
+      } else {
+        formObject.claimed = null;
+      }
+
       if (result.businessEntity) {
         formObject.businessEntity = result.businessEntity;
       } else {
         formObject.businessEntity = null;
       }
 
-      if (result.employeeType) {
-        formObject.employeeType = result.employeeType;
+      if (result.software) {
+        formObject.software = result.software;
       } else {
-        formObject.employeeType = null;
-      }
-
-      if (result.name) {
-        formObject.name = result.name;
-      } else {
-        formObject.name = null;
+        formObject.software = null;
       }
 
       this.myForm.setValue(formObject);
@@ -238,9 +264,11 @@ export class EmployeeEntityComponent implements OnInit {
   resetForm(): void {
     this.myForm.setValue({
       'employeeEntityID': null,
+      'businessEnties': null,
+      'eName': null,
+      'claimed': null,
       'businessEntity': null,
-      'employeeType': null,
-      'name': null
+      'software': null
     });
   }
 }

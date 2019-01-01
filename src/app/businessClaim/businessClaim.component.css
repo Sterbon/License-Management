@@ -14,13 +14,12 @@
 .container {
     margin-left: 72px;
     margin-right: 32px;
-    background-color: #b8daf3;
+    background-color: #F4F4F4;
     border-radius: 5px;
-    /* padding-left: 50%; */
 }
 
 .btn-primary {
-    background: #0066b3;
+    background: #844AE4;
     border-radius: 4px;
     border: 0px;
     font-size: 14px;
@@ -87,44 +86,44 @@ label {
     margin-bottom: 15%;
     box-shadow: 0 0px 0px;
     border: 0px;
-    color: #b8daf3;
+
 }
 .btn-default {
-    color: #0066b3;
+    color: #844EF4;
     background-color: #ffffff;
-    border-color: #0066b3;
+    border-color: #844EF4;
     border-radius: 4px;
     width: 76px;
     height: 40px;
 }
 .btn-danger{
     color: #ffffff;
-    background-color: #0066b3;
-    border-color: #0066b3;
+    background-color: #844AE4;
+    border-color: #844AE4;
     border-radius: 4px;
     width: 76px;
     height: 40px;
 }
 .btn-danger:focus{
-    background-color: #0066b3;
-    border-color: #0066b3;
+    background-color: #4D21A8;
+    border-color: #4D21A8;
 }
 .btn-success {
     color: #ffffff;
-    background-color: #0066b3;
-    border-color: #0066b3;
+    background-color: #844AE4;
+    border-color: #844AE4;
     border-radius: 4px;
     width: 76px;
     height: 40px;
 }
 .btn-success:focus{
-    background-color: #0066b3;
-    border-color: #0066b3;
+    background-color: #4D21A8;
+    border-color: #4D21A8;
 }
 .btn-default:focus{
     background-color: #fff;
-    border-color: #0066b3;  
-    color: #0066b3;      
+    border-color: #4d21a8;  
+    color: #4d21a8;      
 }
 .transaction-title{
     font-family: inherit;
@@ -168,7 +167,7 @@ label {
 
 .invoke_cancel {
     font-size: 14px;
-    color: #0066b3;
+    color: #6C4CC4;
     letter-spacing: 0.2px;
     float: right;
     margin-top: 30px;

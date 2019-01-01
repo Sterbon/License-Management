@@ -18,11 +18,11 @@
 }
 
 .btn-primary {
-    background: #0066b3;
+    background: #844AE4;
     border-radius: 4px;
     border: 0px;
     font-size: 14px;
-    color: rgb(250, 245, 245);
+    color: #FFFFFF;
     letter-spacing: 0;
     line-height: 10px;
     height: 40px;
@@ -32,7 +32,7 @@
 }
 
 .table > thead > tr > th {
-    border-bottom: 1px solid rgb(10, 10, 10);
+    border-bottom: 1px solid #EAEAEA;
 }
 
 .table > thead > tr > th.info {
@@ -41,7 +41,7 @@
 .modal-title {
     font-family: inherit;
     font-size: 24px;
-    color: rgb(10, 9, 9);
+    color: #4E4E4E;
     letter-spacing: 0.28px;
     line-height: 28px;
     padding-top: 15px;
@@ -49,7 +49,7 @@
 .modal-intro {
     font-family: inherit;
     font-size: 14px;
-    color: #141111;
+    color: #545454;
     line-height: 20px;
     padding-top: 15px;
 
@@ -88,41 +88,41 @@ label {
 
 }
 .btn-default {
-    color: #0066b3;
+    color: #844EF4;
     background-color: #ffffff;
-    border-color: #0066b3;
+    border-color: #844EF4;
     border-radius: 4px;
     width: 76px;
     height: 40px;
 }
 .btn-danger{
     color: #ffffff;
-    background-color: #0066b3;
-    border-color: #0066b3;
+    background-color: #844AE4;
+    border-color: #844AE4;
     border-radius: 4px;
     width: 76px;
     height: 40px;
 }
 .btn-danger:focus{
-    background-color: #0066b3;
-    border-color: #0066b3;
+    background-color: #4D21A8;
+    border-color: #4D21A8;
 }
 .btn-success {
     color: #ffffff;
-    background-color: #0066b3;
-    border-color: #0066b3;
+    background-color: #844AE4;
+    border-color: #844AE4;
     border-radius: 4px;
     width: 76px;
     height: 40px;
 }
 .btn-success:focus{
-    background-color: #0066b3;
-    border-color: #0066b3;
+    background-color: #4D21A8;
+    border-color: #4D21A8;
 }
 .btn-default:focus{
     background-color: #fff;
-    border-color: #0066b3;  
-    color: #0066b3;      
+    border-color: #4d21a8;  
+    color: #4d21a8;      
 }
 .asset-title{
     font-family: inherit;

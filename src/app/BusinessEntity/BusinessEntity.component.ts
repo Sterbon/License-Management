@@ -34,14 +34,20 @@ export class BusinessEntityComponent implements OnInit {
 
   businessEntityID = new FormControl('', Validators.required);
   businessEntity = new FormControl('', Validators.required);
-  name = new FormControl('', Validators.required);
+  bName = new FormControl('', Validators.required);
+  software = new FormControl('', Validators.required);
+  availableQuantity = new FormControl('', Validators.required);
+  totalQuantity = new FormControl('', Validators.required);
 
 
   constructor(public serviceBusinessEntity: BusinessEntityService, fb: FormBuilder) {
     this.myForm = fb.group({
       businessEntityID: this.businessEntityID,
       businessEntity: this.businessEntity,
-      name: this.name
+      bName: this.bName,
+      software: this.software,
+      availableQuantity: this.availableQuantity,
+      totalQuantity: this.totalQuantity
     });
   };
 
@@ -100,13 +106,19 @@ export class BusinessEntityComponent implements OnInit {
       $class: 'org.hcl.licensenetwork.BusinessEntity',
       'businessEntityID': this.businessEntityID.value,
       'businessEntity': this.businessEntity.value,
-      'name': this.name.value
+      'bName': this.bName.value,
+      'software': this.software.value,
+      'availableQuantity': this.availableQuantity.value,
+      'totalQuantity': this.totalQuantity.value
     };
 
     this.myForm.setValue({
       'businessEntityID': null,
       'businessEntity': null,
-      'name': null
+      'bName': null,
+      'software': null,
+      'availableQuantity': null,
+      'totalQuantity': null
     });
 
     return this.serviceBusinessEntity.addParticipant(this.participant)
@@ -116,7 +128,10 @@ export class BusinessEntityComponent implements OnInit {
       this.myForm.setValue({
         'businessEntityID': null,
         'businessEntity': null,
-        'name': null
+        'bName': null,
+        'software': null,
+        'availableQuantity': null,
+        'totalQuantity': null
       });
       this.loadAll(); 
     })
@@ -134,7 +149,10 @@ export class BusinessEntityComponent implements OnInit {
     this.participant = {
       $class: 'org.hcl.licensenetwork.BusinessEntity',
       'businessEntity': this.businessEntity.value,
-      'name': this.name.value
+      'bName': this.bName.value,
+      'software': this.software.value,
+      'availableQuantity': this.availableQuantity.value,
+      'totalQuantity': this.totalQuantity.value
     };
 
     return this.serviceBusinessEntity.updateParticipant(form.get('businessEntityID').value, this.participant)
@@ -187,7 +205,10 @@ export class BusinessEntityComponent implements OnInit {
       const formObject = {
         'businessEntityID': null,
         'businessEntity': null,
-        'name': null
+        'bName': null,
+        'software': null,
+        'availableQuantity': null,
+        'totalQuantity': null
       };
 
       if (result.businessEntityID) {
@@ -202,10 +223,28 @@ export class BusinessEntityComponent implements OnInit {
         formObject.businessEntity = null;
       }
 
-      if (result.name) {
-        formObject.name = result.name;
+      if (result.bName) {
+        formObject.bName = result.bName;
       } else {
-        formObject.name = null;
+        formObject.bName = null;
+      }
+
+      if (result.software) {
+        formObject.software = result.software;
+      } else {
+        formObject.software = null;
+      }
+
+      if (result.availableQuantity) {
+        formObject.availableQuantity = result.availableQuantity;
+      } else {
+        formObject.availableQuantity = null;
+      }
+
+      if (result.totalQuantity) {
+        formObject.totalQuantity = result.totalQuantity;
+      } else {
+        formObject.totalQuantity = null;
       }
 
       this.myForm.setValue(formObject);
@@ -226,7 +265,10 @@ export class BusinessEntityComponent implements OnInit {
     this.myForm.setValue({
       'businessEntityID': null,
       'businessEntity': null,
-      'name': null
+      'bName': null,
+      'software': null,
+      'availableQuantity': null,
+      'totalQuantity': null
     });
   }
 }

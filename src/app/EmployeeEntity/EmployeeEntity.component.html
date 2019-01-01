@@ -36,28 +36,28 @@
             
   
               
-                <label for="businessEntity">Business Entity</label>
+                <label for="businessEnties">Business Enties</label>
                 <div class="checkbox">
                   
                     <label>
                       <input
                         
-                          formControlName="businessEntity"
+                          formControlName="businessEnties"
                         
-                        name="businessEntity"
+                        name="businessEnties"
                         value="SOFTWARE_SELLER"
                         type="radio"
                         
                       />
-                      SOFTWARE_SELLER
+                      SOFTWARE SELLER
                     </label>
                   
                     <label>
                       <input
                         
-                          formControlName="businessEntity"
+                          formControlName="businessEnties"
                         
-                        name="businessEntity"
+                        name="businessEnties"
                         value="CORPORATE"
                         type="radio"
                         
@@ -68,126 +68,53 @@
                     <label>
                       <input
                         
-                          formControlName="businessEntity"
+                          formControlName="businessEnties"
                         
-                        name="businessEntity"
+                        name="businessEnties"
                         value="CORPORATE_SUBSIDARY"
                         type="radio"
                         
                       />
-                      CORPORATE_SUBSIDARY
+                      CORPORATE SUBSIDARY
                     </label>
                   
                     <label>
                       <input
                         
-                          formControlName="businessEntity"
+                          formControlName="businessEnties"
                         
-                        name="businessEntity"
+                        name="businessEnties"
                         value="CORPORATE_PARTNER"
                         type="radio"
                         
                       />
-                      CORPORATE_PARTNER
+                      CORPORATE PARTNER
                     </label>
                   
                     <label>
                       <input
                         
-                          formControlName="businessEntity"
+                          formControlName="businessEnties"
                         
-                        name="businessEntity"
+                        name="businessEnties"
                         value="CORPORATE_CLIENT"
                         type="radio"
                         
                       />
-                      CORPORATE_CLIENT
+                      CORPORATE CLIENT
                     </label>
                   
                     <label>
                       <input
                         
-                          formControlName="businessEntity"
+                          formControlName="businessEnties"
                         
-                        name="businessEntity"
+                        name="businessEnties"
                         value="CORPORATE_JOINT_VENTURE"
                         type="radio"
                         
                       />
-                      CORPORATE_JOINT_VENTURE
-                    </label>
-                  
-                </div>
-              
-            
-  
-              
-                <label for="employeeType">Employee Type</label>
-                <div class="checkbox">
-                  
-                    <label>
-                      <input
-                        
-                          formControlName="employeeType"
-                        
-                        name="employeeType"
-                        value="CORPORATE_EMPLOYEE"
-                        type="radio"
-                        
-                      />
-                      CORPORATE_EMPLOYEE
-                    </label>
-                  
-                    <label>
-                      <input
-                        
-                          formControlName="employeeType"
-                        
-                        name="employeeType"
-                        value="CORPORATE_SUBSIDARY_EMPLOYEE"
-                        type="radio"
-                        
-                      />
-                      CORPORATE_SUBSIDARY_EMPLOYEE
-                    </label>
-                  
-                    <label>
-                      <input
-                        
-                          formControlName="employeeType"
-                        
-                        name="employeeType"
-                        value="CORPORATE_PARTNER_EMPLOYEE"
-                        type="radio"
-                        
-                      />
-                      CORPORATE_PARTNER_EMPLOYEE
-                    </label>
-                  
-                    <label>
-                      <input
-                        
-                          formControlName="employeeType"
-                        
-                        name="employeeType"
-                        value="CORPORATE_CLIENT_EMPLOYEE"
-                        type="radio"
-                        
-                      />
-                      CORPORATE_CLIENT_EMPLOYEE
-                    </label>
-                  
-                    <label>
-                      <input
-                        
-                          formControlName="employeeType"
-                        
-                        name="employeeType"
-                        value="CORPORATE_JOINT_VENTURE_EMPLOYEE"
-                        type="radio"
-                        
-                      />
-                      CORPORATE_JOINT_VENTURE_EMPLOYEE
+                      CORPORATE JOINT VENTURE
                     </label>
                   
                 </div>
@@ -196,9 +123,39 @@
   
               
                 <div class="form-group text-left">
-                  <label for="name">Name</label>
+                  <label for="eName">Name</label>
                   
-                    <input formControlName="name" type="text" class="form-control">
+                    <input formControlName="eName" type="text" class="form-control">
+                  
+                </div>
+              
+            
+  
+              
+                <div class="form-group text-left">
+                  <label for="claimed">Claimed</label>
+                  
+                    <input formControlName="claimed" type="checkbox" class="form-control">
+                  
+                </div>
+              
+            
+  
+              
+                <div class="form-group text-left">
+                  <label for="businessEntity">Business Entity</label>
+                  
+                      <textarea formControlName="businessEntity" class="form-control" rows="3"></textarea>
+                  
+                </div>
+              
+            
+  
+              
+                <div class="form-group text-left">
+                  <label for="software">Software</label>
+                  
+                      <textarea formControlName="software" class="form-control" rows="3"></textarea>
                   
                 </div>
               
@@ -240,7 +197,7 @@
               </div>
             
               <div class="form-group text-left">
-                <label for="businessEntity">Business Entity</label>
+                <label for="businessEnties">Business Enties</label>
   
                 
                   
@@ -250,24 +207,24 @@
                         <label>
                           <input
                             
-                              formControlName="businessEntity"
-                              [ngModel]="businessEntity"
+                              formControlName="businessEnties"
+                              [ngModel]="businessEnties"
                             
-                            name="businessEntity"
+                            name="businessEnties"
                             value="SOFTWARE_SELLER"
                             type="radio"
                             
                           />
-                          SOFTWARE_SELLER
+                          SOFTWARE SELLER
                         </label>
                       
                         <label>
                           <input
                             
-                              formControlName="businessEntity"
-                              [ngModel]="businessEntity"
+                              formControlName="businessEnties"
+                              [ngModel]="businessEnties"
                             
-                            name="businessEntity"
+                            name="businessEnties"
                             value="CORPORATE"
                             type="radio"
                             
@@ -278,57 +235,57 @@
                         <label>
                           <input
                             
-                              formControlName="businessEntity"
-                              [ngModel]="businessEntity"
+                              formControlName="businessEnties"
+                              [ngModel]="businessEnties"
                             
-                            name="businessEntity"
+                            name="businessEnties"
                             value="CORPORATE_SUBSIDARY"
                             type="radio"
                             
                           />
-                          CORPORATE_SUBSIDARY
+                          CORPORATE SUBSIDARY
                         </label>
                       
                         <label>
                           <input
                             
-                              formControlName="businessEntity"
-                              [ngModel]="businessEntity"
+                              formControlName="businessEnties"
+                              [ngModel]="businessEnties"
                             
-                            name="businessEntity"
+                            name="businessEnties"
                             value="CORPORATE_PARTNER"
                             type="radio"
                             
                           />
-                          CORPORATE_PARTNER
+                          CORPORATE PARTNER
                         </label>
                       
                         <label>
                           <input
                             
-                              formControlName="businessEntity"
-                              [ngModel]="businessEntity"
+                              formControlName="businessEnties"
+                              [ngModel]="businessEnties"
                             
-                            name="businessEntity"
+                            name="businessEnties"
                             value="CORPORATE_CLIENT"
                             type="radio"
                             
                           />
-                          CORPORATE_CLIENT
+                          CORPORATE CLIENT
                         </label>
                       
                         <label>
                           <input
                             
-                              formControlName="businessEntity"
-                              [ngModel]="businessEntity"
+                              formControlName="businessEnties"
+                              [ngModel]="businessEnties"
                             
-                            name="businessEntity"
+                            name="businessEnties"
                             value="CORPORATE_JOINT_VENTURE"
                             type="radio"
                             
                           />
-                          CORPORATE_JOINT_VENTURE
+                          CORPORATE JOINT VENTURE
                         </label>
                       
                       </div>
@@ -339,95 +296,41 @@
               </div>
             
               <div class="form-group text-left">
-                <label for="employeeType">Employee Type</label>
+                <label for="eName">Name</label>
+  
+                
+                  <input [ngModel]="eName"formControlName="eName" type="text" class="form-control">
+                
+  
+              </div>
+            
+              <div class="form-group text-left">
+                <label for="claimed">Claimed</label>
+  
+                
+                  <input [ngModel]="claimed" formControlName="claimed" type="checkbox" class="form-control">
+                
+  
+              </div>
+            
+              <div class="form-group text-left">
+                <label for="businessEntity">Business Entity</label>
   
                 
                   
-                    <div class="row">
-                      <div class="col-xs-12 checkbox">
-                      
-                        <label>
-                          <input
-                            
-                              formControlName="employeeType"
-                              [ngModel]="employeeType"
-                            
-                            name="employeeType"
-                            value="CORPORATE_EMPLOYEE"
-                            type="radio"
-                            
-                          />
-                          CORPORATE_EMPLOYEE
-                        </label>
-                      
-                        <label>
-                          <input
-                            
-                              formControlName="employeeType"
-                              [ngModel]="employeeType"
-                            
-                            name="employeeType"
-                            value="CORPORATE_SUBSIDARY_EMPLOYEE"
-                            type="radio"
-                            
-                          />
-                          CORPORATE_SUBSIDARY_EMPLOYEE
-                        </label>
-                      
-                        <label>
-                          <input
-                            
-                              formControlName="employeeType"
-                              [ngModel]="employeeType"
-                            
-                            name="employeeType"
-                            value="CORPORATE_PARTNER_EMPLOYEE"
-                            type="radio"
-                            
-                          />
-                          CORPORATE_PARTNER_EMPLOYEE
-                        </label>
-                      
-                        <label>
-                          <input
-                            
-                              formControlName="employeeType"
-                              [ngModel]="employeeType"
-                            
-                            name="employeeType"
-                            value="CORPORATE_CLIENT_EMPLOYEE"
-                            type="radio"
-                            
-                          />
-                          CORPORATE_CLIENT_EMPLOYEE
-                        </label>
-                      
-                        <label>
-                          <input
-                            
-                              formControlName="employeeType"
-                              [ngModel]="employeeType"
-                            
-                            name="employeeType"
-                            value="CORPORATE_JOINT_VENTURE_EMPLOYEE"
-                            type="radio"
-                            
-                          />
-                          CORPORATE_JOINT_VENTURE_EMPLOYEE
-                        </label>
-                      
-                      </div>
-                    </div>
+                    <textarea [ngModel]="businessEntity" formControlName="businessEntity" class="form-control" rows="3"></textarea>
                   
                 
   
               </div>
             
               <div class="form-group text-left">
-                <label for="name">Name</label>
+                <label for="software">Software</label>
   
                 
-                  <input [ngModel]="name"formControlName="name" type="text" class="form-control">
+                  
+                    <textarea [ngModel]="software" formControlName="software" class="form-control" rows="3"></textarea>
+                  
                 
   
               </div>
@@ -483,11 +386,11 @@
     
     <div class="row">
       <div class="col-md-9">
-          <h1 class="participant-title" id='participantName'>Employee Entity</h1>
+          <h1 class="participant-title" id='participantName'>EmployeeEntity</h1>
       </div>
       <div class="col-md-3">
         <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addParticipantModal">
-            <span style="font-size: 14px;font-family: inherit;border-right:1px solid rgba(255,255,255,0.5);padding-right:0.6em;margin-right:0.5em;vertical-align:middle;">
+            <span style="font-size: 14px;font-family: inherit;padding-right:0.6em;margin-right:0.5em;vertical-align:middle;">
                 <svg class="plus-svg" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
                   <path fill-rule="evenodd" d="M5.5,4.5 L9.5,4.5 L10,4.5 L10,5.5 L9.5,5.5 L5.5,5.5 L5.5,9.5 L5.5,10 L4.5,10 L4.5,9.5 L4.5,5.5 L0.5,5.5 L0,5.5 L0,4.5 L0.5,4.5 L4.5,4.5 L4.5,0.5 L4.5,0 L5.5,0 L5.5,0.5 L5.5,4.5 Z"/>
                 </svg>
@@ -503,13 +406,17 @@
           <thead class="thead">
             <tr class="thead-cols">
               
-                  <th class="info">Employee Entity ID</th>
+                  <th class="info">Employee EntityID</th>
+              
+                  <th class="info">Business Enties</th>
+              
+                  <th class="info">Name</th>
+              
+                  <th class="info">Claimed</th>
               
                   <th class="info">Business Entity</th>
               
-                  <th class="info">Employee Type</th>
-              
-                  <th class="info">Name</th>
+                  <th class="info">Software</th>
               
                 <th class="info-actions">Actions</th>
             </tr>
@@ -520,11 +427,15 @@
               
                   <td class="participant-properties">{{participant.employeeEntityID}}</td>
               
+                  <td class="participant-properties">{{participant.businessEnties}}</td>
+              
+                  <td class="participant-properties">{{participant.eName}}</td>
+              
+                  <td class="participant-properties">{{participant.claimed}}</td>
+              
                   <td class="participant-properties">{{participant.businessEntity}}</td>
               
-                  <td class="participant-properties">{{participant.employeeType}}</td>
-              
-                  <td class="participant-properties">{{participant.name}}</td>
+                  <td class="participant-properties">{{participant.software}}</td>
               
               <td>
                 <button (click)="getForm(participant.employeeEntityID);" type="button" class="btn btn-update" data-toggle="modal" data-target="#updateParticipantModal">

@@ -25,7 +25,7 @@ import 'rxjs/add/operator/toPromise';
 })
 export class SoftwareComponent implements OnInit {
 
-  myForm: FormGroup;
+  createAssetForm: FormGroup;
 
   private allAssets;
   private asset;
@@ -37,17 +37,16 @@ export class SoftwareComponent implements OnInit {
   description = new FormControl('', Validators.required);
   totalQuantity = new FormControl('', Validators.required);
   availableQuantity = new FormControl('', Validators.required);
-  owner = new FormControl('', Validators.required);
+  licenseKey = new FormControl('', Validators.required);
 
   constructor(public serviceSoftware: SoftwareService, fb: FormBuilder) {
-    this.myForm = fb.group({
+    this.createAssetForm = fb.group({
       softwareID: this.softwareID,
       softwareName: this.softwareName,
       description: this.description,
       totalQuantity: this.totalQuantity,
       availableQuantity: this.availableQuantity,
-      owner: this.owner
-            
+      licenseKey: this.licenseKey
     });
   };
 
@@ -110,29 +109,29 @@ export class SoftwareComponent implements OnInit {
       'description': this.description.value,
       'totalQuantity': this.totalQuantity.value,
       'availableQuantity': this.availableQuantity.value,
-      'owner': this.owner.value
+      'licenseKey': this.licenseKey.value
     };
 
-    this.myForm.setValue({
+    this.createAssetForm.setValue({
       'softwareID': null,
       'softwareName': null,
       'description': null,
       'totalQuantity': null,
       'availableQuantity': null,
-      'owner': null
+      'licenseKey': null
     });
 
     return this.serviceSoftware.addAsset(this.asset)
     .toPromise()
     .then(() => {
       this.errorMessage = null;
-      this.myForm.setValue({
+      this.createAssetForm.setValue({
         'softwareID': null,
         'softwareName': null,
         'description': null,
         'totalQuantity': null,
         'availableQuantity': null,
-        'owner': null
+        'licenseKey': null
       });
       this.loadAll();
     })
@@ -153,7 +152,7 @@ export class SoftwareComponent implements OnInit {
       'description': this.description.value,
       'totalQuantity': this.totalQuantity.value,
       'availableQuantity': this.availableQuantity.value,
-      'owner': this.owner.value
+      'licenseKey': this.licenseKey.value
     };
 
     return this.serviceSoftware.updateAsset(form.get('softwareID').value, this.asset)
@@ -209,7 +208,7 @@ export class SoftwareComponent implements OnInit {
         'description': null,
         'totalQuantity': null,
         'availableQuantity': null,
-        'owner': null
+        'licenseKey': null
       };
 
       if (result.softwareID) {
@@ -242,13 +241,13 @@ export class SoftwareComponent implements OnInit {
         formObject.availableQuantity = null;
       }
 
-      if (result.owner) {
-        formObject.owner = result.owner;
+      if (result.licenseKey) {
+        formObject.licenseKey = result.licenseKey;
       } else {
-        formObject.owner = null;
+        formObject.licenseKey = null;
       }
 
-      this.myForm.setValue(formObject);
+      this.createAssetForm.setValue(formObject);
 
     })
     .catch((error) => {
@@ -263,13 +262,13 @@ export class SoftwareComponent implements OnInit {
   }
 
   resetForm(): void {
-    this.myForm.setValue({
+    this.createAssetForm.setValue({
       'softwareID': null,
       'softwareName': null,
       'description': null,
       'totalQuantity': null,
       'availableQuantity': null,
-      'owner': null
+      'licenseKey': null
       });
   }
 

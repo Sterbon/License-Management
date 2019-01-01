@@ -16,10 +16,10 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="addAssetModalLabel">Create Asset</h4>
+        <h4 class="modal-title" id="addAssetModalLabel">Create asset</h4>
           <p class="modal-intro">Enter the required values below.</p>
       </div>
-      <form [formGroup]="myForm">
+      <form [formGroup]="createAssetForm">
         <div class="modal-body">
 
 
@@ -67,7 +67,7 @@
 
             
               <div class="form-group text-left">
-                <label for="availableQuantity">Available Quantity</label>
+                <label for="availableQuantity">Aavailable Quantity</label>
                 
                   <input formControlName="availableQuantity" type="number" class="form-control">
                 
@@ -77,9 +77,9 @@
 
             
               <div class="form-group text-left">
-                <label for="owner">Owner</label>
+                <label for="licenseKey">License Key</label>
                 
-                    <textarea formControlName="owner" class="form-control" rows="3"></textarea>
+                  <input formControlName="licenseKey" type="text" class="form-control">
                 
               </div>
             
@@ -88,7 +88,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          <button (click)="addAsset(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Confirm</button>
+          <button (click)="addAsset(createAssetForm);" type="submit" class="btn btn-success" data-dismiss="modal">Confirm</button>
 
         </div>
       </form>
@@ -106,7 +106,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="updateAssetModalLabel">Update Asset</h4>
       </div>
-      <form [formGroup]="myForm">
+      <form [formGroup]="createAssetForm">
         <div class="modal-body">
 
 
@@ -157,12 +157,10 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="owner">Owner</label>
+              <label for="licenseKey">License Key</label>
               
               
-                
-                  <textarea [ngModel]="owner" formControlName="owner" class="form-control" rows="3"></textarea>
-                
+                <input [ngModel]="licenseKey"formControlName="licenseKey" type="text" class="form-control">
               
 
             </div>
@@ -172,7 +170,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button (click)="updateAsset(myForm)" type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
+          <button (click)="updateAsset(createAssetForm)" type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
         </div>
       </form>
     </div>
@@ -188,7 +186,7 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="deleteAssetModalLabel">Delete Asset</h4>
       </div>
-      <form [formGroup]="myForm">
+      <form [formGroup]="createAssetForm">
         <div class="modal-body">
           Are you sure you want to delete this asset?
         </div>
@@ -202,33 +200,117 @@
 </div>
 
 
-
-
-
-<div class="modal fade" id="confirmClaimModal" tabindex="-1" role="dialog" aria-labelledby="confirmClaimModalLabel">
+<!--Business Transaction-->
+<div class="modal fade" id="addBTransactionModal" tabindex="-1" role="dialog" aria-labelledby="addBTransactionModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="confirmClaimModalLabel">Confirm Claim</h4>
+        <h4 class="modal-title" id="addBTransactionModalLabel">Create Transaction</h4>
+        <p class="modal-intro">Enter the required values below.</p>
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">
-          Are you sure you want to cliam this Software?
+
+
+          
+
+            
+              <div class="form-group text-left">
+                <label for="software">Software</label>
+                
+                    <textarea formControlName="software" class="form-control" rows="3"></textarea>
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="businessEntity">Business Entity</label>
+                
+                    <textarea formControlName="businessEntity" class="form-control" rows="3"></textarea>
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="totalClaims">Total Claims</label>
+                
+                  <input formControlName="totalClaims" type="number" class="form-control">
+                
+              </div>
+            
+          
+
+            
+          
+
+            
+          
+
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-          <button type="submit" class="btn btn-danger" data-dismiss="modal">Yes</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button (click)="addBTransaction(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Confirm</button>
         </div>
       </form>
     </div>
   </div>
 </div>
 
+<!--Employee Transaction-->
+<div class="modal fade" id="addTransactionModal" tabindex="-1" role="dialog" aria-labelledby="addTransactionModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="addTransactionModalLabel">Create Transaction</h4>
+        <p class="modal-intro">Enter the required values below.</p>
+      </div>
+      <form [formGroup]="myForm">
+        <div class="modal-body">
 
 
+          
 
+            
+              <div class="form-group text-left">
+                <label for="software">Software</label>
+                
+                    <textarea formControlName="software" class="form-control" rows="3"></textarea>
+                
+              </div>
+            
+          
 
+            
+              <div class="form-group text-left">
+                <label for="employeeEntity">Employee Entity</label>
+                
+                    <textarea formControlName="employeeEntity" class="form-control" rows="3"></textarea>
+                
+              </div>
+            
+          
+
+            
+          
+
+            
+          
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button (click)="addTransaction(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Confirm</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
 
 
 
@@ -271,11 +353,13 @@
             
                 <th class="info">Available Quantity</th>
             
-                <th class="info">Owner</th>
+                <!-- <th class="info">licenseKey</th> -->
+            
+              <th class="info-actions">Actions</th>
 
-                <th class="info-actions">Claim</th>
+              <!-- <th class="info-actions">Claim</th> -->
 
-                <th class="info-actions">Actions</th>
+              
           </tr>
         </thead>
         <tbody>
@@ -292,17 +376,12 @@
             
                 <td class="asset-properties">{{asset.availableQuantity}}</td>
             
-                <td class="asset-properties">{{asset.owner}}</td>
-                
+                <!-- <td class="asset-properties">{{asset.licenseKey}}</td> -->
 
+                <!-- <td>
+                  <button (click)="resetForm();" type="button" class="btn btn-success" data-toggle="modal" data-target="#addTransactionModal">Claim</button>
 
-            <td>
-              <button (click)=getForm(asset.softwareID) type="button" class="btn-success" data-toggle="modal" data-target="#confirmClaimModal">
-                CLAIM
-              </button>
-            </td>   
-            
-            
+                </td>    -->
             
             <td>
               <button (click)="getForm(asset.softwareID);" type="button" class="btn btn-update" data-toggle="modal" data-target="#updateAssetModal">

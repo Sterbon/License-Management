@@ -25,27 +25,24 @@ import { SoftwareComponent } from './Software/Software.component';
 
 import { BusinessEntityComponent } from './BusinessEntity/BusinessEntity.component';
 import { EmployeeEntityComponent } from './EmployeeEntity/EmployeeEntity.component';
-import { softwareRequestComponent } from './softwareRequest/softwareRequest.component';
 
 import { businessClaimComponent } from './businessClaim/businessClaim.component';
 import { businessReleaseComponent } from './businessRelease/businessRelease.component';
 import { employeeClaimComponent } from './employeeClaim/employeeClaim.component';
 import { employeeReleaseComponent } from './employeeRelease/employeeRelease.component';
 
-@NgModule({
+  @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SoftwareComponent,
     BusinessEntityComponent,
     EmployeeEntityComponent,
-    softwareRequestComponent,
     businessClaimComponent,
     businessReleaseComponent,
     employeeClaimComponent,
-    employeeReleaseComponent
+    employeeReleaseComponent,
   ],
-
   imports: [
     BrowserModule,
     FormsModule,
@@ -53,11 +50,9 @@ import { employeeReleaseComponent } from './employeeRelease/employeeRelease.comp
     HttpModule,
     AppRoutingModule
   ],
-
   providers: [
     DataService
   ],
-
   bootstrap: [AppComponent]
 })
 export class AppModule { }

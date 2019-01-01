@@ -32,20 +32,18 @@ export class businessClaimComponent implements OnInit {
   private currentId;
   private errorMessage;
 
-  sReq = new FormControl('', Validators.required);
   software = new FormControl('', Validators.required);
-  owner = new FormControl('', Validators.required);
-  newOwner = new FormControl('', Validators.required);
+  businessEntity = new FormControl('', Validators.required);
+  totalClaims = new FormControl('', Validators.required);
   transactionId = new FormControl('', Validators.required);
   timestamp = new FormControl('', Validators.required);
 
 
   constructor(private servicebusinessClaim: businessClaimService, fb: FormBuilder) {
     this.myForm = fb.group({
-      sReq: this.sReq,
       software: this.software,
-      owner: this.owner,
-      newOwner: this.newOwner,
+      businessEntity: this.businessEntity,
+      totalClaims: this.totalClaims,
       transactionId: this.transactionId,
       timestamp: this.timestamp
     });
@@ -105,19 +103,17 @@ export class businessClaimComponent implements OnInit {
   addTransaction(form: any): Promise<any> {
     this.Transaction = {
       $class: 'org.hcl.licensenetwork.businessClaim',
-      'sReq': this.sReq.value,
       'software': this.software.value,
-      'owner': this.owner.value,
-      'newOwner': this.newOwner.value,
+      'businessEntity': this.businessEntity.value,
+      'totalClaims': this.totalClaims.value,
       'transactionId': this.transactionId.value,
       'timestamp': this.timestamp.value
     };
 
     this.myForm.setValue({
-      'sReq': null,
       'software': null,
-      'owner': null,
-      'newOwner': null,
+      'businessEntity': null,
+      'totalClaims': null,
       'transactionId': null,
       'timestamp': null
     });
@@ -127,10 +123,9 @@ export class businessClaimComponent implements OnInit {
     .then(() => {
       this.errorMessage = null;
       this.myForm.setValue({
-        'sReq': null,
         'software': null,
-        'owner': null,
-        'newOwner': null,
+        'businessEntity': null,
+        'totalClaims': null,
         'transactionId': null,
         'timestamp': null
       });
@@ -147,10 +142,9 @@ export class businessClaimComponent implements OnInit {
   updateTransaction(form: any): Promise<any> {
     this.Transaction = {
       $class: 'org.hcl.licensenetwork.businessClaim',
-      'sReq': this.sReq.value,
       'software': this.software.value,
-      'owner': this.owner.value,
-      'newOwner': this.newOwner.value,
+      'businessEntity': this.businessEntity.value,
+      'totalClaims': this.totalClaims.value,
       'timestamp': this.timestamp.value
     };
 
@@ -199,19 +193,12 @@ export class businessClaimComponent implements OnInit {
     .then((result) => {
       this.errorMessage = null;
       const formObject = {
-        'sReq': null,
         'software': null,
-        'owner': null,
-        'newOwner': null,
+        'businessEntity': null,
+        'totalClaims': null,
         'transactionId': null,
         'timestamp': null
       };
-
-      if (result.sReq) {
-        formObject.sReq = result.sReq;
-      } else {
-        formObject.sReq = null;
-      }
 
       if (result.software) {
         formObject.software = result.software;
@@ -219,16 +206,16 @@ export class businessClaimComponent implements OnInit {
         formObject.software = null;
       }
 
-      if (result.owner) {
-        formObject.owner = result.owner;
+      if (result.businessEntity) {
+        formObject.businessEntity = result.businessEntity;
       } else {
-        formObject.owner = null;
+        formObject.businessEntity = null;
       }
 
-      if (result.newOwner) {
-        formObject.newOwner = result.newOwner;
+      if (result.totalClaims) {
+        formObject.totalClaims = result.totalClaims;
       } else {
-        formObject.newOwner = null;
+        formObject.totalClaims = null;
       }
 
       if (result.transactionId) {
@@ -259,10 +246,9 @@ export class businessClaimComponent implements OnInit {
 
   resetForm(): void {
     this.myForm.setValue({
-      'sReq': null,
       'software': null,
-      'owner': null,
-      'newOwner': null,
+      'businessEntity': null,
+      'totalClaims': null,
       'transactionId': null,
       'timestamp': null
     });

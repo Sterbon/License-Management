@@ -11,66 +11,58 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
-<link href="https://fonts.googleapis.com/css?family=Iceberg" rel="stylesheet">
-<nav class="navbar navbar-inverse" style="background-image: url('https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');" >
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<nav class="navbar navbar-inverse" 
+style="background-image: url('https://i.ibb.co/zXkv4qH/back.png');" >
     <div class="container-fluid" >
       <div class="navbar-header" >
         <strong>
-          <i class="navbar-brand" [ngStyle]="{'color': 'white', 'font-size': '35px', 'font-weight': 'bold'}" >LICENSE MANAGEMENT</i><br>
+          <i class="navbar-brand" 
+            [ngStyle]="{'color': 'white', 'font-size': '35px', 'font-weight': 'bold'}" >LICENSE MANAGEMENT</i><br>
         </strong> 
-          <ul class="navbar-name" [ngStyle]="{'color': 'white', 'font-size': '15px'}">(Powered by Blockchain)</ul>
+          <ul class="navbar-name" 
+            [ngStyle]="{'color': 'white', 'font-size': '15px'}">(Powered by Blockchain)</ul>
             <!-- <label col-xs-6 class="navbar-name">Name:</label> -->
       </div>
-      <ul class="nav navbar-nav" >
-        <li col-sm-6 class="dropdown active">
-            <a class="dropdown-toggle" data-toggle="dropdown">Assets</a>
-            <ul class="dropdown-menu scrollable-menu">
-              
+      
+      <ul class="nav navbar-nav">
+
               <li><a [routerLink]="['/Software']">Software</a></li>
-              
-            </ul>
-        </li>
+            
         <li class="dropdown active">
-          <a class="dropdown-toggle" data-toggle="dropdown">Participants</a>
+          <a class="dropdown-toggle" data-toggle="dropdown" >Participants</a>
           <ul class="dropdown-menu scrollable-menu">
             
-            <li><a [routerLink]="['/BusinessEntity']">Business Entity</a></li>
+            <li><a [routerLink]="['/BusinessEntity']">BusinessEntity</a></li>
             
-            <li><a [routerLink]="['/EmployeeEntity']">Employee Entity</a></li>
-            
-            <li><a [routerLink]="['/softwareRequest']">Software Request</a></li>
+            <li><a [routerLink]="['/EmployeeEntity']">EmployeeEntity</a></li>
             
           </ul>
       </li>
       <li class="dropdown active">
-        <a class="dropdown-toggle" data-toggle="dropdown">Transactions</a>
+        <a class="dropdown-toggle" data-toggle="dropdown">Business</a>
         <ul class="dropdown-menu scrollable-menu">
           
           <li><a [routerLink]="['/businessClaim']">Business Claim</a></li>
           
-          <li><a [routerLink]="['/businessRelease']">Business Release</a></li>        
+          <li><a [routerLink]="['/businessRelease']">Business Relsease</a></li>
+          
         </ul>
     </li>
+
     <li class="dropdown active">
-      <a class="dropdown-toggle" data-toggle="dropdown">EmployeeProfile</a> 
+      <a class="dropdown-toggle" data-toggle="dropdown">Employee</a>
       <ul class="dropdown-menu scrollable-menu">
-         
-          <li><a [routerLink]="['/employeeClaim']">Employee Claim</a></li>
-          
-          <li><a [routerLink]="['/employeeRelease']">Employee Release</a></li>
- 
-      </ul> 
-    </li>
-    </ul>
-    <ul>
-    <a><button class="loginb" style="float:right">LogOut
-       <!-- <ul><a [routerLink]="['/lo']"></a></ul>  -->
-    </button></a>
-    <a><button class="logoutb" style="float:right" >LogIn
-      <!-- <ul><a [routerLink]="['/home']"></a></ul> -->
-    </button></a>
-    </ul>
-   <!-- </label> -->
+            
+        <li><a [routerLink]="['/employeeClaim']">Employee Claim</a></li>
+        
+        <li><a [routerLink]="['/employeeRelease']">Employee Release</a></li>
+        
+      </ul>
+  </li>
+
+
+      </ul>
     </div>
   </nav>
   

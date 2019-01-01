@@ -17,37 +17,37 @@ import { ExpectedConditions, browser, element, by } from 'protractor';
 import {} from 'jasmine';
 
 
-describe('Starting tests for angular-app', function() {
+describe('Starting tests for License_Management', function() {
   let page: AngularTestPage;
 
   beforeEach(() => {
     page = new AngularTestPage();
   });
 
-  it('website title should be angular-app', () => {
+  it('website title should be License_Management', () => {
     page.navigateTo('/');
     return browser.getTitle().then((result)=>{
-      expect(result).toBe('angular-app');
+      expect(result).toBe('License_Management');
     })
   });
 
-  it('network-name should be license-management-network@0.0.2-deploy.38',() => {
+  it('network-name should be license-management-network@0.0.5-deploy.62',() => {
     element(by.css('.network-name')).getWebElement()
     .then((webElement) => {
       return webElement.getText();
     })
     .then((txt) => {
-      expect(txt).toBe('license-management-network@0.0.2-deploy.38.bna');
+      expect(txt).toBe('license-management-network@0.0.5-deploy.62.bna');
     });
   });
 
-  it('navbar-brand should be angular-app',() => {
+  it('navbar-brand should be License_Management',() => {
     element(by.css('.navbar-brand')).getWebElement()
     .then((webElement) => {
       return webElement.getText();
     })
     .then((txt) => {
-      expect(txt).toBe('angular-app');
+      expect(txt).toBe('License_Management');
     });
   });
 
@@ -83,10 +83,10 @@ describe('Starting tests for angular-app', function() {
       });
     });
 
-    it('BusinessEntity table should have 4 columns',() => {
+    it('BusinessEntity table should have 7 columns',() => {
       page.navigateTo('/BusinessEntity');
       element.all(by.css('.thead-cols th')).then(function(arr) {
-        expect(arr.length).toEqual(4); // Addition of 1 for 'Action' column
+        expect(arr.length).toEqual(7); // Addition of 1 for 'Action' column
       });
     });
   
@@ -101,28 +101,10 @@ describe('Starting tests for angular-app', function() {
       });
     });
 
-    it('EmployeeEntity table should have 5 columns',() => {
+    it('EmployeeEntity table should have 7 columns',() => {
       page.navigateTo('/EmployeeEntity');
       element.all(by.css('.thead-cols th')).then(function(arr) {
-        expect(arr.length).toEqual(5); // Addition of 1 for 'Action' column
-      });
-    });
-  
-    it('softwareRequest component should be loadable',() => {
-      page.navigateTo('/softwareRequest');
-      browser.findElement(by.id('participantName'))
-      .then((participantName) => {
-        return participantName.getText();
-      })
-      .then((txt) => {
-        expect(txt).toBe('softwareRequest');
-      });
-    });
-
-    it('softwareRequest table should have 4 columns',() => {
-      page.navigateTo('/softwareRequest');
-      element.all(by.css('.thead-cols th')).then(function(arr) {
-        expect(arr.length).toEqual(4); // Addition of 1 for 'Action' column
+        expect(arr.length).toEqual(7); // Addition of 1 for 'Action' column
       });
     });
   

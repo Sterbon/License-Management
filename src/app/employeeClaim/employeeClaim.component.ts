@@ -26,24 +26,23 @@ import 'rxjs/add/operator/toPromise';
 export class employeeClaimComponent implements OnInit {
 
   myForm: FormGroup;
+  
 
   private allTransactions;
   private Transaction;
   private currentId;
   private errorMessage;
 
-  softwareRequestID = new FormControl('', Validators.required);
-  owner = new FormControl('', Validators.required);
-  newOwner = new FormControl('', Validators.required);
+  software = new FormControl('', Validators.required);
+  employeeEntity = new FormControl('', Validators.required);
   transactionId = new FormControl('', Validators.required);
   timestamp = new FormControl('', Validators.required);
 
 
   constructor(private serviceemployeeClaim: employeeClaimService, fb: FormBuilder) {
     this.myForm = fb.group({
-      softwareRequestID: this.softwareRequestID,
-      owner: this.owner,
-      newOwner: this.newOwner,
+      software: this.software,
+      employeeEntity: this.employeeEntity,
       transactionId: this.transactionId,
       timestamp: this.timestamp
     });
@@ -103,17 +102,15 @@ export class employeeClaimComponent implements OnInit {
   addTransaction(form: any): Promise<any> {
     this.Transaction = {
       $class: 'org.hcl.licensenetwork.employeeClaim',
-      'softwareRequestID': this.softwareRequestID.value,
-      'owner': this.owner.value,
-      'newOwner': this.newOwner.value,
+      'software': this.software.value,
+      'employeeEntity': this.employeeEntity.value,
       'transactionId': this.transactionId.value,
       'timestamp': this.timestamp.value
     };
 
     this.myForm.setValue({
-      'softwareRequestID': null,
-      'owner': null,
-      'newOwner': null,
+      'software': null,
+      'employeeEntity': null,
       'transactionId': null,
       'timestamp': null
     });
@@ -123,9 +120,8 @@ export class employeeClaimComponent implements OnInit {
     .then(() => {
       this.errorMessage = null;
       this.myForm.setValue({
-        'softwareRequestID': null,
-        'owner': null,
-        'newOwner': null,
+        'software': null,
+        'employeeEntity': null,
         'transactionId': null,
         'timestamp': null
       });
@@ -142,9 +138,8 @@ export class employeeClaimComponent implements OnInit {
   updateTransaction(form: any): Promise<any> {
     this.Transaction = {
       $class: 'org.hcl.licensenetwork.employeeClaim',
-      'softwareRequestID': this.softwareRequestID.value,
-      'owner': this.owner.value,
-      'newOwner': this.newOwner.value,
+      'software': this.software.value,
+      'employeeEntity': this.employeeEntity.value,
       'timestamp': this.timestamp.value
     };
 
@@ -193,29 +188,22 @@ export class employeeClaimComponent implements OnInit {
     .then((result) => {
       this.errorMessage = null;
       const formObject = {
-        'softwareRequestID': null,
-        'owner': null,
-        'newOwner': null,
+        'software': null,
+        'employeeEntity': null,
         'transactionId': null,
         'timestamp': null
       };
 
-      if (result.softwareRequestID) {
-        formObject.softwareRequestID = result.softwareRequestID;
+      if (result.software) {
+        formObject.software = result.software;
       } else {
-        formObject.softwareRequestID = null;
+        formObject.software = null;
       }
 
-      if (result.owner) {
-        formObject.owner = result.owner;
+      if (result.employeeEntity) {
+        formObject.employeeEntity = result.employeeEntity;
       } else {
-        formObject.owner = null;
-      }
-
-      if (result.newOwner) {
-        formObject.newOwner = result.newOwner;
-      } else {
-        formObject.newOwner = null;
+        formObject.employeeEntity = null;
       }
 
       if (result.transactionId) {
@@ -246,9 +234,8 @@ export class employeeClaimComponent implements OnInit {
 
   resetForm(): void {
     this.myForm.setValue({
-      'softwareRequestID': null,
-      'owner': null,
-      'newOwner': null,
+      'software': null,
+      'employeeEntity': null,
       'transactionId': null,
       'timestamp': null
     });

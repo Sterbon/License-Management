@@ -12,119 +12,128 @@
  limitations under the License.
 -->
 <div class="modal fade" id="addTransactionModal" tabindex="-1" role="dialog" aria-labelledby="addTransactionModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="addTransactionModalLabel">Create Transaction</h4>
-        <p class="modal-intro">Enter the required values below.</p>
-      </div>
-      <form [formGroup]="myForm">
-        <div class="modal-body">
-
-
-          
-
-            
-              <div class="form-group text-left">
-                <label for="sReq">S Req</label>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="addTransactionModalLabel">Create Transaction</h4>
+              <p class="modal-intro">Enter the required values below.</p>
+            </div>
+            <form [formGroup]="myForm">
+              <div class="modal-body">
+      
+      
                 
-                    <textarea formControlName="sReq" class="form-control" rows="3"></textarea>
+      
+                  
+                    <div class="form-group text-left">
+                      <label for="software">Software</label>
+                      
+                          <textarea formControlName="software" class="form-control" rows="3"></textarea>
+                      
+                    </div>
+                  
                 
+      
+                  
+                    <div class="form-group text-left">
+                      <label for="businessEntity">Business Entity</label>
+                      
+                          <textarea formControlName="businessEntity" class="form-control" rows="3"></textarea>
+                      
+                    </div>
+                  
+                
+      
+                  
+                    <div class="form-group text-left">
+                      <label for="totalClaims">Total Claims</label>
+                      
+                        <input formControlName="totalClaims" type="number" class="form-control">
+                      
+                    </div>
+                  
+                
+      
+                  
+                
+      
+                  
+                
+      
               </div>
-            
-          
-
-            
-              <div class="form-group text-left">
-                <label for="software">Software</label>
-                
-                    <textarea formControlName="software" class="form-control" rows="3"></textarea>
-                
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                  <button (click)="addTransaction(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Confirm</button>
               </div>
-            
-          
-
-            
-              <div class="form-group text-left">
-                <label for="owner">Owner</label>
-                
-                    <textarea formControlName="owner" class="form-control" rows="3"></textarea>
-                
-              </div>
-            
-          
-
-            
-              <div class="form-group text-left">
-                <label for="newOwner">New Owner</label>
-                
-                    <textarea formControlName="newOwner" class="form-control" rows="3"></textarea>
-                
-              </div>
-            
-          
-
-            
-          
-
-            
-          
-
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-            <button (click)="addTransaction(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Confirm</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-<div class="container col-md-6">
-    <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
-        <strong>Error:</strong> {{errorMessage}}
-    </div>
-
-  <div class="row">
-    <div class="col-md-12">
-        <h1 class="transaction-title" id='transactionName'>Business Claim</h1>
-    </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="row">
-        <div class="col-md-12">
-          When invoked, this transaction will have the following attributes:
-          <br>
-          <ul>
-            
-              
-                <li><span class="attribute"><b>S Req</b></span></li>
-              
-            
-              
-                <li><span class="attribute"><b>Software</b></span></li>
-              
-            
-              
-                <li><span class="attribute"><b>Owner</b></span></li>
-              
-            
-              
-                <li><span class="attribute"><b>New Owner</b></span></li>
-              
-            
-              
-            
-              
-            
-          </ul>
+            </form>
+          </div>
         </div>
       </div>
-      <button (click)="resetForm();" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTransactionModal">Invoke</button>
-    </div>
-  </div>
-</div>
-
+      
+         
+        
+            <!-- <div class="container"> -->
+              <div class="container">
+              <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+                  <strong>Error:</strong> {{errorMessage}}
+              </div>
+            
+            <div class="row">
+              <div class="col-md-9">
+                  <h1 class="modal-title" id='participantName'>Business History</h1>
+              </div>
+              <div class="col-md-3">
+                  <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTransactionModal">
+                      <span style="font-size: 14px;font-family: inherit;padding-right:0.2em;margin-right:0.2em;vertical-align:middle;">
+                          <!-- <svg class="plus-svg" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                            <path fill-rule="evenodd" d="M5.5,4.5 L9.5,4.5 L10,4.5 L10,5.5 L9.5,5.5 L5.5,5.5 L5.5,9.5 L5.5,10 L4.5,10 L4.5,9.5 L4.5,5.5 L0.5,5.5 L0,5.5 L0,4.5 L0.5,4.5 L4.5,4.5 L4.5,0.5 L4.5,0 L5.5,0 L5.5,0.5 L5.5,4.5 Z"/>
+                          </svg> -->
+                      </span>
+                    Claim
+                  </button>
+                </div>
+              </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-12">
+                  <table class="table table-responsive">
+                    <thead class="thead">
+                      <tr class="thead-cols">
+                        
+                          <th class="info">Software</th>
+                      
+                          <th class="info">Business Entity</th>
+                       
+                          <th class="info">Total Claims</th>
+      
+                          <th class="info">Transaction Id</th>
+                      
+                          <th class="info">Timestamp</th>
+                  
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let transaction of allTransactions">
+          
+                          <td class="transaction-properties">{{transaction.software}}</td>
+                      
+                          <td class="transaction-properties">{{transaction.businessEntity}}</td>
+                      
+                          <td class="transaction-properties">{{transaction.totalClaims}}</td>
+      
+                          <td class="transaction-properties">{{transaction.transactionId}}</td>
+                          
+                          <td class="transaction-properties">{{transaction.timestamp}}</td>
+                      
+                      
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+              
+          
+      
+      
