@@ -11,9 +11,10 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
+
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <nav class="navbar navbar-inverse" 
-style="background-image: url('https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');" >
+style="background-image: url('https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');" >
     <div class="container-fluid" >
       <div class="navbar-header" >
         <strong>
@@ -22,7 +23,6 @@ style="background-image: url('https://images.pexels.com/photos/373543/pexels-pho
         </strong> 
           <ul class="navbar-name" 
             [ngStyle]="{'color': 'white', 'font-size': '15px'}">(Powered by Blockchain)</ul>
-            <!-- <label col-xs-6 class="navbar-name">Name:</label> -->
       </div>
       
       <ul class="nav navbar-nav">
@@ -30,7 +30,6 @@ style="background-image: url('https://images.pexels.com/photos/373543/pexels-pho
           <a class="dropdown-toggle" data-toggle="dropdown" >Asset</a>
           <ul class="dropdown-menu scrollable-menu">
               <li><a [routerLink]="['/Software']">Software</a></li>
-             
           </ul>
         </li>
         <li class="dropdown active">
@@ -42,32 +41,36 @@ style="background-image: url('https://images.pexels.com/photos/373543/pexels-pho
             <li><a [routerLink]="['/EmployeeEntity']">EmployeeEntity</a></li>
             
           </ul>
-      </li>
-      <li class="dropdown active">
-        <a class="dropdown-toggle" data-toggle="dropdown">Business</a>
-        <ul class="dropdown-menu scrollable-menu">
-          
-          <li><a [routerLink]="['/businessClaim']">Business Claim</a></li>
-          
-          <li><a [routerLink]="['/businessRelease']">Business Relsease</a></li>
-          
-        </ul>
-    </li>
-
-    <li class="dropdown active">
-      <a class="dropdown-toggle" data-toggle="dropdown">Employee</a>
-      <ul class="dropdown-menu scrollable-menu">
+        </li>
+      
+        <li class="dropdown active">
+          <a class="dropdown-toggle" data-toggle="dropdown">Business</a>
+          <ul class="dropdown-menu scrollable-menu">
             
-        <li><a [routerLink]="['/employeeClaim']">Employee Claim</a></li>
-        
-        <li><a [routerLink]="['/employeeRelease']">Employee Release</a></li>
-        
-      </ul>
-  </li>
+            <li><a [routerLink]="['/businessClaim']">Business Claim</a></li>
+            
+            <li><a [routerLink]="['/businessRelease']">Business Relsease</a></li>
+            
+          </ul>
+        </li>
+      
+        <li class="dropdown active">
+          <a class="dropdown-toggle" data-toggle="dropdown">Employee</a>
+          <ul class="dropdown-menu scrollable-menu">
+                
+            <li><a [routerLink]="['/employeeClaim']">Employee Claim</a></li>
+            
+            <li><a [routerLink]="['/employeeRelease']">Employee Release</a></li>
+            
+          </ul>
+        </li>
 
 
       </ul>
+
     </div>
   </nav>
   
   <router-outlet></router-outlet>
+
+  

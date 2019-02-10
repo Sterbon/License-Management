@@ -12,5 +12,10 @@
  * limitations under the License.
  */
  body {
-    background-color: red;
+    flex: 1;
+    text-align: center;
+    padding: 200px 0;
+    font-weight: 800;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
 }
